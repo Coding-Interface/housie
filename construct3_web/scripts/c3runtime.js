@@ -4007,6 +4007,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Tween.Acts.TweenValue,
 		C3.Plugins.Text.Exps.Text,
 		C3.Behaviors.Tween.Acts.TweenOneProperty,
+		C3.Plugins.Sprite.Acts.MoveToBottom,
 		C3.Behaviors.Tween.Cnds.OnTweensFinished,
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
