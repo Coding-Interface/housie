@@ -4235,6 +4235,7 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 1,
 		() => 0.1,
+		() => "WinDialog",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
@@ -4286,7 +4287,6 @@ self.C3_ExpressionFuncs = [
 			return () => f0(n1.ExpObject());
 		},
 		() => 2,
-		() => "WinDialog",
 		() => "GamePlay",
 		() => 240,
 		() => 0.4,
