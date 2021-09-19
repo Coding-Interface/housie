@@ -3972,7 +3972,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.AnimationFrame,
 		C3.Plugins.Arr.Acts.Delete,
 		C3.Plugins.Sprite.Acts.Destroy,
-		C3.Plugins.Arr.Cnds.IsEmpty,
 		C3.Plugins.System.Cnds.PickAll,
 		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.Browser.Acts.Close,
@@ -4253,6 +4252,7 @@ self.C3_ExpressionFuncs = [
 		() => 0.01,
 		() => -1023,
 		() => 1000,
+		() => 9,
 		() => "wrong",
 		() => "auto",
 		p => {
