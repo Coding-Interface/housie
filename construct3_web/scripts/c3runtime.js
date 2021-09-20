@@ -3970,10 +3970,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Button.Acts.SetEnabled,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Button.Acts.SetCSSStyle,
-		C3.Plugins.TextBox.Cnds.CompareText,
+		C3.ScriptsInEvents.Es_login_Event13_Act1,
 		C3.ScriptsInEvents.Es_login_Event14_Act1,
 		C3.ScriptsInEvents.Es_login_Event15_Act1,
-		C3.ScriptsInEvents.Es_login_Event16_Act1,
+		C3.Plugins.TextBox.Cnds.CompareText,
 		C3.Plugins.DrawingCanvas.Acts.FillEllipse,
 		C3.Plugins.DrawingCanvas.Exps.Width,
 		C3.Plugins.DrawingCanvas.Exps.Height,
@@ -4096,6 +4096,7 @@ self.C3_JsPropNameTable = [
 	{DATA_TEMP: 0},
 	{Data: 0},
 	{Player: 0},
+	{hudBG: 0},
 	{Btns: 0},
 	{Email: 0},
 	{Password: 0},
@@ -4295,6 +4296,8 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() + " is the housie");
 		},
+		() => 1.5,
+		() => 0.8,
 		() => -260,
 		() => 1.6,
 		() => "right",
@@ -4304,7 +4307,6 @@ self.C3_ExpressionFuncs = [
 			return () => (n0.ExpObject() + 60);
 		},
 		() => 0.5,
-		() => 1.5,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 1);

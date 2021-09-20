@@ -22,12 +22,12 @@ const scriptsInEvents = {
 					
 					if(errorCode== "auth/invalid-email"){
 					
-						runtime.callFunction("InvalidEmailOrPassword", ["Invalid email/password. Try Again!"]);
+						runtime.callFunction("InvalidEmailOrPassword", "Invalid email/password. Try Again!");
 						
 					
 					}
 					else if(errorCode =="auth/email-already-in-use"){
-					
+						runtime.callFunction("InvalidEmailOrPassword", "");
 						runtime.callFunction("SignIn");
 						
 					}
@@ -45,13 +45,13 @@ const scriptsInEvents = {
 			
 		},
 
-		async Es_login_Event14_Act1(runtime, localVars)
+		async Es_login_Event13_Act1(runtime, localVars)
 		{
 			console.log("sign in")
 			signInWithEmailAndPassword(auth, runtime.globalVars.Email, runtime.globalVars.Password)
 			  .then((userCredential) => {
 			    // Signed in 
-			
+				runtime.callFunction("InvalidEmailOrPassword", "");
 				const user = auth.currentUser;
 				console.log("current_user", user)
 				if (user !== null) {
@@ -71,12 +71,13 @@ const scriptsInEvents = {
 			    const errorCode = error.code;
 			    const errorMessage = error.message;
 				console.log("Error: "+errorMessage+" Error_Code: "+errorCode)	
+				runtime.callFunction("InvalidEmailOrPassword", errorMessage);
 				
 			  });
 			  
 		},
 
-		async Es_login_Event15_Act1(runtime, localVars)
+		async Es_login_Event14_Act1(runtime, localVars)
 		{
 			try {
 			  const docRef = await addDoc(collection(db, "users"), {
@@ -90,7 +91,7 @@ const scriptsInEvents = {
 			}
 		},
 
-		async Es_login_Event16_Act1(runtime, localVars)
+		async Es_login_Event15_Act1(runtime, localVars)
 		{
 				updateProfile(auth.currentUser, {
 				  displayName: runtime.globalVars.Name, photoURL: ""
@@ -110,7 +111,7 @@ const scriptsInEvents = {
 			 if(runtime.layout.name== "LoginLayout")
 			 runtime.callFunction("hideLoader");
 			 else if(runtime.layout.name== "MainLayout"){
-			 runtime.goToLayout("LoginLayout");
+			 runtime.p("LoginLayout");
 			 }
 			 }
 			 )
