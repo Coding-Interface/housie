@@ -8,7 +8,7 @@ runOnStartup(async runtime =>
 	// Code to run on the loading screen.
 	// Note layouts, objects etc. are not yet available.
 // 	console.log(myName);
-runtime.globalVars.MaxValue = 100;
+runtime.globalVars.MaxValue = 40;
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
 
